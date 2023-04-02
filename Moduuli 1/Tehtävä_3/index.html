@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Tehtävä 3</h1>
+<p id="summa"></p>
+<p id="tulo"></p>
+<p id="keskiarvo"></p>
+<script>
+    'use strict';
+    const luku1 = parseInt(prompt("Anna ensimmäinen luku: "));
+    const luku2 = parseInt(prompt("Anna toinen luku: "));
+    const luku3 = parseInt(prompt("Anna kolmas luku: "))
+    const summa = luku1 + luku2 + luku3;
+    const tulo = luku1 * luku2 * luku3;
+    const keskiarvo = (luku1 + luku2 + luku3) / 3;
+    document.querySelector('#summa').innerHTML = 'Lukujen summa on: ' + summa;
+    document.querySelector('#tulo').innerHTML = 'Lukujen tulo on: ' + tulo;
+    document.querySelector('#keskiarvo').innerHTML = 'Lukujen keskiarvo on: ' + keskiarvo.toFixed(2);
+</script>
+</body>
+</html>

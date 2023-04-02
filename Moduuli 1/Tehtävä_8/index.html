@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tehtävä 8</h1>
+<p id="vastaus"></p>
+<script>
+const aloitusvuosi = parseInt(prompt("Anna aloitusvuosi: "));
+const lopetusvuosi = parseInt(prompt("Anna lopetusvuosi: "));
+
+function karkausvuosi_määrä (aloitusvuosi, lopetusvuosi){
+    var vuosi_lista = [];
+    for (var i = aloitusvuosi; i <= lopetusvuosi; i++)
+    {
+      vuosi_lista.push(i);
+    }
+    var uusi_lista = [];
+
+vuosi_lista.forEach(
+    function(vuosi){
+      if (testaa_karkausvuosi(vuosi))
+        uusi_lista.push(vuosi);
+    });
+
+    return uusi_lista;
+  }
+
+function testaa_karkausvuosi(vuosi) {
+  if((vuosi % 4 === 0 && vuosi % 100 !== 0) || (vuosi % 100 === 0 && vuosi % 400 === 0)){
+        return vuosi;
+        } else {
+            return false;
+  }
+}
+
+karkausvuodet = karkausvuosi_määrä(aloitusvuosi, lopetusvuosi);
+document.querySelector('#vastaus').innerHTML = "Karkausvuosia ovat vuodet: " + karkausvuodet;
+</script>
+</body>
+</html>

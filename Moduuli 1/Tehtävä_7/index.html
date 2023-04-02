@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tehtävä 7</h1>
+<p id="noppiensumma"></p>
+<script>
+  var noppienMäärä = parseInt(prompt("Kuinka monta noppaa haluat heittää?"))
+  var noppienSumma = 0;
+  function heitäNoppaa(){
+      for (var i = 0; i < noppienMäärä; i++){
+        var nopanHeitto = Math.floor(Math.random() *6) + 1;
+        noppienSumma += nopanHeitto;
+    }
+}
+heitäNoppaa();
+document.querySelector('#noppiensumma').innerHTML = 'Heitit ' + noppienMäärä  + ' noppaa, joiden summa on ' + noppienSumma;
+
+</script>
+</body>
+</html>

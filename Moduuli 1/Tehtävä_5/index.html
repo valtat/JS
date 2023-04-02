@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tehtävä 5</h1>
+<p id="vastaus"></p>
+<script>
+  const vuosiluku = parseInt(prompt("Anna vuosiluku: "))
+  if (vuosiluku%4 == 0 && vuosiluku%100 != 0 || vuosiluku%400 == 0){
+    var vastaus = " on karkausvuosi."
+  }
+  else {
+    vastaus = " ei ole karkausvuosi."
+  }
+
+document.querySelector('#vastaus').innerHTML = 'Vuosi ' + vuosiluku  + vastaus;
+</script>
+</body>
+</html>
