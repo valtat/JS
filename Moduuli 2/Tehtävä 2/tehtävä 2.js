@@ -7,6 +7,7 @@ for (i = 0; participants_amount > i; i++){
 }
 
 for (let i = 0; i < participants_list.length; i++) {
+        participants_list.sort();
+        document.querySelector('#osallistujat').insertAdjacentHTML("beforebegin", "<li>" + participants_list[i] + "</li>");
         console.log(`Name: ${participants_list[i]}`);
     }
-//document.querySelector('#osallistujat').innerHTML = participants_list;
